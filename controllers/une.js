@@ -1,4 +1,4 @@
-LeagueManager.controller('UneCtrl', function($scope, $rootScope, $http, $timeout, Restangular) {
+LeagueManager.controller('UneCtrl', function($scope, $rootScope, $http, $timeout, Restangular, PubNub) {
 
 	$rootScope.subTitle = "le mag de la BBBL";
 	//Récupération du classement en JSON (temporaire)

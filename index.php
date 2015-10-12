@@ -1,8 +1,4 @@
 <!DOCTYPE html>
-<?php
-//PHPBB connection / Connexion à phpBB
-include('phpBB_Connect.php');
-?>
 
 <html  ng-app="LeagueManager">
 <head>
@@ -31,8 +27,8 @@ include('phpBB_Connect.php');
       <li><a title="Forum" href="Forum"><img src="resources/img/LogoForum.svg"><span>Forum</span></a></li>
       <li><a title="Lancer BloodBowl" href="steam://run/216890"><img src="resources/img/LogoSteam.svg"><span>Jouer</span></a></li>
       <li><a title="Lancer Mumble" href="mumble://srv07.serveurmumble.com:50674/"><img src="resources/img/LogoMumble.svg"><span>Mumble</span></a></li>
-      <li ng-if="<?php echo $user->data['user_id'];?>===1" ng-click="displayConnector()"><a title="Connexion"><img src="resources/img/LogoConnect.svg"><span>Connexion</span></a></li>
-      <li ng-if="<?php echo $user->data['user_id'];?>!==1"><a title="Le vestiaire"><img src="resources/img/LogoConnect.svg"><span>Le vestiaire</span></a></li>
+      <li ng-click="displayConnector()"><a title="Connexion"><img src="resources/img/LogoConnect.svg"><span>Connexion</span></a></li>
+
     </ul>
   </nav>
 </header>
@@ -52,6 +48,9 @@ include('phpBB_Connect.php');
   <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
   <script src="bower_components/angular-css/angular-css.min.js"></script>
 
+  <!-- ChatBox -->
+  <script src="http://cdn.pubnub.com/pubnub.min.js"></script>
+  <script src="bower_components/pubnub-angular/pubnub-angular.js"></script>
   <!-- Module BBBL -->
   <script src="controllers/app.js"></script>
   <script src="controllers/une.js"></script>
@@ -59,6 +58,7 @@ include('phpBB_Connect.php');
   <script src="controllers/competition.js"></script>
   <script src="controllers/equipe.js"></script>
   <script src="controllers/reader.js"></script>
+  <script src="controllers/chat.js"></script>
 
 </body>
 </html>

@@ -1,4 +1,4 @@
-var LeagueManager = angular.module('LeagueManager', ['ngRoute','restangular','ngSanitize','ngCSS'])
+var LeagueManager = angular.module('LeagueManager', ['ngRoute','restangular','ngSanitize','ngCSS',"pubnub.angular.service"])
 
 //API REST
 LeagueManager.config(function (RestangularProvider) {
